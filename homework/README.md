@@ -34,11 +34,14 @@ commit 85024d3100126de36331c6982bfaac02cdab9e76 (tag: v0.12.23)
 2.2. Сколько родителей у коммита b8d720? Напишите их хеши. 
 
 git log --pretty=%P -n 1 b8d720
+
 ```
 git log --pretty=%P -n 1 b8d720
 56cd7859e05c36c06b56d013b55a252d0bb7e158 9ea88f22fc6269854151c571162c5bcf958bee2b
+```
 
 2.3 Перечислите хеши и комментарии всех коммитов, которые были сделаны между тегами v0.12.23 и v0.12.24.
+
 ```
 % git log v0.12.23...v0.12.24
 commit 33ff1c03bb960b332be3af2e333462dde88b279e (tag: v0.12.24)
@@ -117,17 +120,18 @@ Date:   Thu Mar 5 21:12:06 2020 +0000
 ```
 2.4 Найдите коммит, в котором была создана функция func providerSource, её определение в коде выглядит так: func providerSource(...) (вместо троеточия перечислены аргументы).
 
-git log -S"func providerSource"
 
 ```
+git log -S "func providerSource"
 commit 8c928e83589d90a031f811fae52a81be7153e82f
 Author: Martin Atkins <mart@degeneration.co.uk>
 Date:   Thu Apr 2 18:04:39 2020 -0700
 
 ```
+
 2.5 Найдите все коммиты, в которых была изменена функция globalPluginDirs.
 
-git log -S globalPluginDirs --oneline
+
 ```
 git log -S globalPluginDirs --oneline
 65c4ba7363 Remove terraform binary
@@ -142,9 +146,10 @@ c0b1761096 prevent log output during init
 
 2.6  Кто автор функции synchronizedWriters?
 
-git log -S synchronizedWriters
+
 
 ```
+git log -S synchronizedWriters
 commit 5ac311e2a91e381e2f52234668b49ba670aa0fe5
 Author: Martin Atkins <mart@degeneration.co.uk>
 Date:   Wed May 3 16:25:41 2017 -0700
